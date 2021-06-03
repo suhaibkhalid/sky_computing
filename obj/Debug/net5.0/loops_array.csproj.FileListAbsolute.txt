@@ -1,0 +1,16 @@
+C:\Users\M. Suhaib Khalid\loop_arrays\bin\Debug\net5.0\loops_array.exe
+C:\Users\M. Suhaib Khalid\loop_arrays\bin\Debug\net5.0\loops_array.deps.json
+C:\Users\M. Suhaib Khalid\loop_arrays\bin\Debug\net5.0\loops_array.runtimeconfig.json
+C:\Users\M. Suhaib Khalid\loop_arrays\bin\Debug\net5.0\loops_array.runtimeconfig.dev.json
+C:\Users\M. Suhaib Khalid\loop_arrays\bin\Debug\net5.0\loops_array.dll
+C:\Users\M. Suhaib Khalid\loop_arrays\bin\Debug\net5.0\ref\loops_array.dll
+C:\Users\M. Suhaib Khalid\loop_arrays\bin\Debug\net5.0\loops_array.pdb
+C:\Users\M. Suhaib Khalid\loop_arrays\obj\Debug\net5.0\loops_array.csproj.AssemblyReference.cache
+C:\Users\M. Suhaib Khalid\loop_arrays\obj\Debug\net5.0\loops_array.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\M. Suhaib Khalid\loop_arrays\obj\Debug\net5.0\loops_array.AssemblyInfoInputs.cache
+C:\Users\M. Suhaib Khalid\loop_arrays\obj\Debug\net5.0\loops_array.AssemblyInfo.cs
+C:\Users\M. Suhaib Khalid\loop_arrays\obj\Debug\net5.0\loops_array.csproj.CoreCompileInputs.cache
+C:\Users\M. Suhaib Khalid\loop_arrays\obj\Debug\net5.0\loops_array.dll
+C:\Users\M. Suhaib Khalid\loop_arrays\obj\Debug\net5.0\ref\loops_array.dll
+C:\Users\M. Suhaib Khalid\loop_arrays\obj\Debug\net5.0\loops_array.pdb
+C:\Users\M. Suhaib Khalid\loop_arrays\obj\Debug\net5.0\loops_array.genruntimeconfig.cache

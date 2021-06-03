@@ -4,8 +4,17 @@ namespace loops_array
 {
     class Program
     {
+        static void MyMethod()
+        {
+            Console.WriteLine("I just got executed!");          // Method
+        }
+
+
         static void Main(string[] args)
         {
+
+            MyMethod();
+
             for (int i=0; i<10; i++)
             {
                 if (i==5)
