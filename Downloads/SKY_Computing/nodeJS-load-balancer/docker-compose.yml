@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  app1:
+    build: ./app1
+    container_name: app1
+    restart: always
+    expose:
+      - "3000"
+
+  app2:
+    build: ./app2
+    container_name: app2
+    restart: always
+    expose:
+      - "4000"
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx_proxy
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+
+    depends_on:
+      - app1
+      - app2
