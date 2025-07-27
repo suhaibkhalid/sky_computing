@@ -1,5 +1,5 @@
-**Load-Balanced Node Apps with NGINX and Docker
-Overview**
+# Load-Balanced Node Apps with NGINX and Docker
+Overview
 
 This project demonstrates a basic load distribution strategy using:
 
@@ -11,7 +11,7 @@ This project demonstrates a basic load distribution strategy using:
 
 When total requests cross a defined threshold (e.g., 10), traffic is automatically rerouted from Node App 1 to Node App 2.
 
-**Project Structure**
+# Project Structure
 project-root/
 ├── app1/                    # Node App 1
 │   ├── Dockerfile
@@ -26,7 +26,7 @@ project-root/
 └── test-req/
     └── test.js              # Axios script to simulate multiple requests
     
-**Setup Instructions**
+# Setup Instructions
 1. Clone / Prepare Your Project
    Ensure your folders/files are laid out as shown above.
 
@@ -47,7 +47,7 @@ project-root/
    - node-app2
    - nginx
 
-**How It Works**
+# How It Works
 Node App 1:
 - Listens for incoming HTTP requests
 - Maintains a request counter (in-memory)
@@ -59,12 +59,12 @@ Node App 2:
 - Used when load crosses threshold
 
 
-**NGINX:**
+# NGINX
 - Reverse proxies all requests to App 1 at the start
 - Could be extended to handle load balancing as needed
 
 **Note:** The request counter resets if the container restarts. This is acceptable for demo/testing purposes.
-How to Test (Using Axios in test-req/)
+# How to Test (Using Axios in test-req/)
 1. Navigate to Test Folder
    cd test-req
 
@@ -72,7 +72,7 @@ How to Test (Using Axios in test-req/)
    npm install axios
 
 3. Run the Load Simulation Script
-   node test.js
+   npm run start
 
 Example Output:
 [Request 1] Response from App 1
@@ -89,29 +89,28 @@ Optional Enhancements
 - Integrate NGINX’s built-in load-balancing for true horizontal scaling
 - Add metrics/logging to monitor which app served the request
 
-**NGINX Role Details:**
+# NGINX Role Details
 
-**What is NGINX ?**
+# What is NGINX ?
 NGINX (Engine-X) is a powerful, lightweight web server and reverse proxy. It’s used to:
 Web Serve: Serves static files (HTML, CSS, JS, etc.) directly to users
 Reverse Proxy: Receives HTTP requests and forwards them to backend services (like Node.js apps)
 
-**Scope in our Project:**
+# Scope in our Project
 To simulate a load-balanced system where requests go to:
 App1, until it hits a threshold (e.g., 10 requests
 Then App1 forwards excess load to App2
 NGINX can make this system scalable, organized, and cloud-ready.
 
 
-**NGINX Role in our project**
+# NGINX Role in our project
 Role:  What NGINX Does                                                        
 Reverse Proxy:  Forwards all HTTP requests to our Node.js backend(s)                  
 Load Balancer:  Chooses App1 or App2 based on current load (via `least_conn`)            
 Gatekeeper:  Listens on public port 80 (EC2) and routes traffic internally via Docker 
 Scalability Enabler: Allows you to add more Node.js apps without rewriting routing logic     
 
-
-**Benefits of NGINX**
+# Benefits of NGINX
 Reverse : Decouples your client from backend complexity 
 Load Balancer: Distributes requests efficiently           
 Modular: Easily add App3, App4, etc. later     
@@ -120,20 +119,20 @@ Optional SSL: Can be extended to support HTTPS in the future
 
 
 
-**Without NGINX (Just Node Apps):**
+# Without NGINX (Just Node Apps)
 We have to expose App1 and App2 on different ports (3000, 4000)
 We need a frontend or a script to decide when to use App1 vs App2
 We have to maintain routing logic manually
 
-**Project Documentation
+# Project Documentation
 Workload Distribution Using Dockerized Node.js Apps and NGINX on AWS EC2**
 
-**Project Objective**
+# Project Objective
 The goal of this project is to demonstrate load distribution (Intra-cloud migration) between multiple Node.js servers using a Dockerized architecture with NGINX as a reverse proxy, 
 hosted on an Amazon EC2 instance (Free Tier). The system ensures that incoming client requests are handled efficiently and forwarded intelligently based on server load conditions.
 
-**System Architecture**
-Components:
+#System Architecture
+**Components**:
 Local Client: Sends HTTP requests to the public IP of the EC2 instance.
 NGINX Container: Acts as the load balancer and reverse proxy.
 App1 Container: Primary request handler (Node.js app).
@@ -172,7 +171,7 @@ Git & GitHub: Source control and deployment repo
 Bash/SSH: Secure remote access to EC2 instance         
 curl / Axios: Testing HTTP requests from local machine
 
-**Deployment Workflow**
+# Deployment Workflow
 1.	Project Setup:
 	Created and pushed the application to a GitHub repository.
 2.	AWS EC2 Configuration:
@@ -183,10 +182,10 @@ curl / Axios: Testing HTTP requests from local machine
 	Installed Docker and Git.
 	Cloned the project from GitHub.
 
-#connect to the EC2 instance from local terminal with the pem file
+# connect to the EC2 instance from local terminal with the pem file
 ssh -i sky_computing.pem ec2-user@13.60.56.58
 
-#clone project into EC2 instance from github
+# clone project into EC2 instance from github
 git clone https://suhaibkhalid:ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@github.com/suhaibkhalid/sky_computing.git
 
 # On new instance
