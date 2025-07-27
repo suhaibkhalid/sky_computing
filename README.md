@@ -74,7 +74,7 @@ Node App 2:
 3. Run the Load Simulation Script
    npm run start
 
-Example Output:
+**Example Output:**
 [Request 1] Response from App 1
 [Request 2] Response from App 1
 ... 
@@ -234,6 +234,8 @@ sudo yum install -y nodejs
 cd test-req
 npm install axios
 npm run start 
+
+**Example Output:**
 
 [Request 1] Response from App 1
 [Request 2] Response from App 1
