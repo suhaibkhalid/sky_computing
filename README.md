@@ -183,10 +183,10 @@ curl / Axios: Testing HTTP requests from local machine
 	Cloned the project from GitHub.
 
 # connect to the EC2 instance from local terminal with the pem file
-ssh -i sky_computing.pem ec2-user@13.60.56.58
+ssh -i sky_computing.pem ec2-user@<You_EC2_Instance_Public_IP>
 
 # clone project into EC2 instance from github
-git clone https://suhaibkhalid:ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@github.com/suhaibkhalid/sky_computing.git
+git clone https://suhaibkhalid:ghp_xxxxxxx@github.com/suhaibkhalid/sky_computing.git
 
 # On new instance
 sudo yum update -y
@@ -201,8 +201,6 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 # Reboot to apply group change
 sudo reboot
-
-
 
 
 4.	Security Configuration:
