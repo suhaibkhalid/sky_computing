@@ -182,17 +182,71 @@ curl / Axios: Testing HTTP requests from local machine
 	SSH’d into the EC2 instance.
 	Installed Docker and Git.
 	Cloned the project from GitHub.
+
+#connect to the EC2 instance from local terminal with the pem file
+ssh -i sky_computing.pem ec2-user@13.60.56.58
+
+#clone project into EC2 instance from github
+git clone https://suhaibkhalid:ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@github.com/suhaibkhalid/sky_computing.git
+
+# On new instance
+sudo yum update -y
+sudo yum install docker -y
+sudo service docker start
+sudo usermod -aG docker ec2-user
+
+
+# Install Docker Compose
+sudo curl -L "https://github.com/docker/compose/releases/download/v2.24.6/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+
+# Reboot to apply group change
+sudo reboot
+
+
+
+
 4.	Security Configuration:
 	Updated EC2's inbound rules to allow HTTP (port 80) and SSH (port 22) traffic.
+
 5.	Dockerization:
 	Built Docker containers for:
 	App1 (Node.js)
 	App2 (Node.js)
 	NGINX (proxy server)
 	All services orchestrated using Docker Compose.
+
 6.	Running the Application:
 	Used Docker Compose to run all containers.
 	NGINX exposed on port 80; internal routing to App1 and App2 based on load.
+
+#Command: docker-compose up --build -d
+
+docker ps
+
+You should see something like this:
+CONTAINER ID   IMAGE         ...   NAMES
+xxxxxx         app1-image    ...   app1
+xxxxxx         app2-image    ...   app2
+xxxxxx         nginx-image   ...   nginx
+
+#Install Node.js (if not already):
+sudo yum install -y nodejs
+
+#Go to the Test script Folder
+cd test-req
+npm install axios
+npm run start 
+
+[Request 1] Response from App 1
+[Request 2] Response from App 1
+[Request 3] Response from App 1
+...
+[Request 11] Response from App 2
+[Request 12] Response from App 2
+
+
+
 7.	Testing and Load Distribution:
 	Sent a sequence of POST requests from the local machine using the EC2 public IP.
 	Verified how requests were balanced between App1 and App2 via logs and responses.
