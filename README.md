@@ -1,4 +1,4 @@
-# Load-Balanced Node Apps with NGINX and Docker
+# Intra-Cloud (Horizontal) Migration
 Overview
 
 This project demonstrates a basic load distribution strategy using:
