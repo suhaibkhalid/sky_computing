@@ -219,8 +219,8 @@ sudo reboot
 	Used Docker Compose to run all containers.
 	NGINX exposed on port 80; internal routing to App1 and App2 based on load.
 
-#Command: docker-compose up --build -d
-
+# Command: '
+docker-compose up --build -d
 docker ps
 
 You should see something like this:
@@ -229,10 +229,10 @@ xxxxxx         app1-image    ...   app1
 xxxxxx         app2-image    ...   app2
 xxxxxx         nginx-image   ...   nginx
 
-#Install Node.js (if not already):
+# Install Node.js (if not already):
 sudo yum install -y nodejs
 
-#Go to the Test script Folder
+# Go to the Test script Folder
 cd test-req
 npm install axios
 npm run start 
@@ -246,7 +246,7 @@ npm run start
 
 
 
-7.	Testing and Load Distribution:
+# Testing and Load Distribution:
 	Sent a sequence of POST requests from the local machine using the EC2 public IP.
 	Verified how requests were balanced between App1 and App2 via logs and responses.
      How Load Distribution Works
