@@ -257,3 +257,14 @@ npm run start
 •	This simulates a threshold-based workload offloading strategy, commonly used in scalable distributed systems.
 
 
+# SCreenshots
+![0](https://github.com/user-attachments/assets/71c6c223-43f7-4dae-a40e-f071656ab613)
+![4](https://github.com/user-attachments/assets/4d819d54-ea5c-4774-a0ea-51f15b325cbb)
+![3](https://github.com/user-attachments/assets/88dc9e2b-60aa-4271-905c-21f9bf71ef25)
+![2](https://github.com/user-attachments/assets/43ef842b-18a5-44a4-9746-4d1f870437c4)
+![1](https://github.com/user-attachments/assets/4e90325e-a65f-4302-8995-af12228d6ba1)
+
+
+
+
+
